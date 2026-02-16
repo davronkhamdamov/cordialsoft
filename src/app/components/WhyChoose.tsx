@@ -120,13 +120,12 @@ export function WhyChoose() {
               >
                 <motion.div
                   whileHover={{ y: -12 }}
-                  transition={{ duration: 0.4, ease: [0.19, 1, 0.22, 1] }}
+                  transition={{ duration: 0.7, ease: [0.19, 1, 0.22, 1] }}
                   className="text-center group"
                 >
                   {/* Animated 3D liquid glass icon */}
                   <motion.div
                     className="relative inline-flex items-center justify-center mb-6"
-                    whileHover={{ rotateY: 360, scale: 1.1 }}
                     transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
                     // style={{ transformStyle: "preserve-3d" }}
                   >
@@ -154,7 +153,6 @@ export function WhyChoose() {
                     <motion.div
                       className="absolute w-28 h-28 border-2 border-white/20 rounded-[1.5rem] backdrop-blur-sm"
                       animate={{
-                        rotate: [0, 90, 180, 270, 360],
                         scale: [1, 1.05, 1],
                       }}
                       transition={{

@@ -1,14 +1,18 @@
-import { motion } from 'motion/react';
-import { useInView } from 'motion/react';
-import { useRef } from 'react';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { motion } from "motion/react";
+import { useInView } from "motion/react";
+import { useRef } from "react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export function CTA() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section id="contact" ref={ref} className="py-32 bg-gradient-to-br from-[#5DA9E9] via-[#4FB3BF] to-[#5DA9E9] text-white relative overflow-hidden">
+    <section
+      id="contact"
+      ref={ref}
+      className="py-32 bg-gradient-to-br from-[#5DA9E9] via-[#4FB3BF] to-[#5DA9E9] text-white relative overflow-hidden"
+    >
       {/* Liquid animated background elements */}
       <div className="absolute inset-0">
         <motion.div
@@ -63,9 +67,9 @@ export function CTA() {
               className="inline-flex items-center gap-2 mb-6 px-5 py-2.5 glass-strong rounded-full border border-white/30 shadow-xl"
               animate={{
                 boxShadow: [
-                  '0 0 20px rgba(255, 255, 255, 0.3)',
-                  '0 0 40px rgba(255, 255, 255, 0.5)',
-                  '0 0 20px rgba(255, 255, 255, 0.3)',
+                  "0 0 20px rgba(255, 255, 255, 0.3)",
+                  "0 0 40px rgba(255, 255, 255, 0.5)",
+                  "0 0 20px rgba(255, 255, 255, 0.3)",
                 ],
               }}
               transition={{
@@ -81,9 +85,10 @@ export function CTA() {
             <h2 className="mb-6 text-white">
               Ready to Transform Your Digital Presence?
             </h2>
-            
+
             <p className="text-white/80 mb-8 text-lg leading-relaxed">
-              Get a free consultation and discover how CordialSoft can help your business grow with a modern, high-performance website.
+              Get a free consultation and discover how CordialSoft can help your
+              business grow with a modern, high-performance website.
             </p>
 
             <motion.button
@@ -102,7 +107,7 @@ export function CTA() {
                   repeat: Infinity,
                 }}
               />
-              
+
               <span className="relative z-10 flex items-center gap-2 text-white font-semibold">
                 Start Your Project Today
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
@@ -131,7 +136,9 @@ export function CTA() {
             >
               <div className="glass-strong rounded-2xl px-6 py-3 border border-white/30">
                 <div className="text-white/70 text-sm">Email</div>
-                <div className="text-white font-medium">hello@cordialsoft.com</div>
+                <div className="text-white font-medium">
+                  hello@cordialsoft.com
+                </div>
               </div>
               <div className="glass-strong rounded-2xl px-6 py-3 border border-white/30">
                 <div className="text-white/70 text-sm">Phone</div>
@@ -160,7 +167,7 @@ export function CTA() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                style={{ transformStyle: 'preserve-3d' }}
+                style={{ transformStyle: "preserve-3d" }}
               >
                 {/* Laptop screen with liquid glass */}
                 <div className="relative glass-strong rounded-[2rem] p-4 shadow-2xl border-2 border-white/30">
@@ -193,7 +200,7 @@ export function CTA() {
                         className="absolute w-2 h-2 bg-white rounded-full"
                         style={{
                           left: `${15 + i * 10}%`,
-                          top: '50%',
+                          top: "50%",
                         }}
                         animate={{
                           y: [-20, -70, -20],
@@ -214,7 +221,7 @@ export function CTA() {
                 <div className="h-4 glass-strong rounded-b-[2rem] mt-1 border-t border-white/30" />
 
                 {/* Liquid glow effect */}
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 bg-white/20 rounded-[2rem] blur-3xl -z-10"
                   animate={{
                     opacity: [0.3, 0.6, 0.3],

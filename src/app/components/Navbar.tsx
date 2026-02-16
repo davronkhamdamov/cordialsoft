@@ -1,13 +1,14 @@
-import { motion } from 'motion/react';
-import { useState } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import { motion } from "motion/react";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import logo from "./icons/logo.png";
 
 const navLinks = [
-  { name: 'Services', href: '#services' },
-  { name: 'Portfolio', href: '#portfolio' },
-  { name: 'Process', href: '#process' },
-  { name: 'About', href: '#about' },
-  { name: 'Contact', href: '#contact' },
+  { name: "Services", href: "#services" },
+  { name: "Portfolio", href: "#portfolio" },
+  { name: "Process", href: "#process" },
+  { name: "About", href: "#about" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export function Navbar() {
@@ -30,10 +31,9 @@ export function Navbar() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
-              <div className="w-11 h-11 bg-gradient-to-br from-[#5DA9E9] to-[#4FB3BF] rounded-2xl flex items-center justify-center shadow-lg shadow-[#5DA9E9]/30">
-                <Globe className="w-6 h-6 text-white" />
+              <div className="h-32 rounded-2xl flex items-center justify-center">
+                <img src={logo} alt="logo" className="w-20 h-20 object-cover" />
               </div>
-              <span className="text-xl font-semibold">CordialSoft</span>
             </motion.a>
 
             {/* Desktop Navigation */}
@@ -49,15 +49,15 @@ export function Navbar() {
                   whileHover={{ y: -2 }}
                 >
                   {link.name}
-                  <motion.span 
+                  <motion.span
                     className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-[#5DA9E9] to-[#4FB3BF] rounded-full"
                     initial={{ width: 0 }}
-                    whileHover={{ width: '100%' }}
+                    whileHover={{ width: "100%" }}
                     transition={{ duration: 0.3 }}
                   />
                 </motion.a>
               ))}
-              
+
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -76,7 +76,11 @@ export function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden text-[#1F2937] p-2 glass rounded-xl"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </motion.button>
           </div>
 
@@ -84,7 +88,7 @@ export function Navbar() {
           <motion.div
             initial={false}
             animate={{
-              height: isOpen ? 'auto' : 0,
+              height: isOpen ? "auto" : 0,
               opacity: isOpen ? 1 : 0,
             }}
             transition={{ duration: 0.3, ease: [0.19, 1, 0.22, 1] }}

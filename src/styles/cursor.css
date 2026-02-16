@@ -2,6 +2,10 @@ body {
     cursor: none;
 }
 
+*:hover {
+    cursor: none;
+}
+
 /* make sure these are visible */
 #cursor-dot,
 #cursor-dot-outline {
