@@ -1,17 +1,30 @@
-import { motion } from 'motion/react';
-import { Globe, Heart, Twitter, Linkedin, Github, Dribbble } from 'lucide-react';
+import { motion } from "motion/react";
+import { Globe, Heart, Linkedin, Github } from "lucide-react";
+import { TelegramIcon } from "./icons/TelegramIcon";
 
 const footerLinks = {
-  Services: ['Website Design', 'Web Development', 'Landing Pages', 'Educational Platforms'],
-  Company: ['About Us', 'Our Process', 'Portfolio', 'Contact'],
-  Resources: ['Blog', 'Case Studies', 'FAQs', 'Support'],
+  Services: [
+    "Website Design",
+    "Web Development",
+    "Landing Pages",
+    "Educational Platforms",
+  ],
+  Company: ["About Us", "Our Process", "Portfolio", "Contact"],
+  Resources: ["Blog", "Case Studies", "FAQs", "Support"],
 };
 
 const socialLinks = [
-  { name: 'Twitter', url: '#', icon: Twitter },
-  { name: 'LinkedIn', url: '#', icon: Linkedin },
-  { name: 'GitHub', url: '#', icon: Github },
-  { name: 'Dribbble', url: '#', icon: Dribbble },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/company/cordialsoft",
+    icon: Linkedin,
+  },
+  { name: "GitHub", url: "https://github.com/CordialSoft", icon: Github },
+  {
+    name: "Telegram",
+    url: "https://t.me/CordialSoft",
+    icon: TelegramIcon,
+  },
 ];
 
 export function Footer() {
@@ -37,9 +50,10 @@ export function Footer() {
               <span className="text-2xl font-bold">CordialSoft</span>
             </motion.div>
             <p className="text-white/70 mb-8 max-w-md leading-relaxed">
-              Building beautiful, fast, and modern websites that help businesses grow and succeed in the digital world.
+              Building beautiful, fast, and modern websites that help businesses
+              grow and succeed in the digital world.
             </p>
-            
+
             {/* Social links with liquid glass */}
             <div className="flex gap-3">
               {socialLinks.map((social) => {
@@ -92,7 +106,8 @@ export function Footer() {
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl mb-3 text-white">Stay Updated</h3>
             <p className="text-white/70 mb-6">
-              Subscribe to our newsletter for the latest web design tips and trends
+              Subscribe to our newsletter for the latest web design tips and
+              trends
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
@@ -115,7 +130,7 @@ export function Footer() {
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 flex items-center gap-2">
-              © {new Date().getFullYear()} CordialSoft. Made with{' '}
+              © {new Date().getFullYear()} CordialSoft. Made with{" "}
               <motion.span
                 animate={{
                   scale: [1, 1.3, 1],
@@ -127,7 +142,7 @@ export function Footer() {
                 }}
               >
                 <Heart className="w-4 h-4 text-red-400 fill-current inline" />
-              </motion.span>{' '}
+              </motion.span>{" "}
               for businesses worldwide
             </p>
             <div className="flex gap-6">
@@ -151,13 +166,23 @@ export function Footer() {
 
         {/* Back to top button */}
         <motion.button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           whileHover={{ y: -3, scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="fixed bottom-8 right-8 w-14 h-14 glass-strong rounded-2xl flex items-center justify-center shadow-xl shadow-[#5DA9E9]/20 border border-white/30 text-white z-50"
+          className="fixed bottom-8 right-8 w-14 h-14 glass-strong rounded-2xl flex items-center justify-center shadow-xl shadow-[#5DA9E9]/20 border border-white/30 text-black z-50"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 10l7-7m0 0l7 7m-7-7v18"
+            />
           </svg>
         </motion.button>
       </div>

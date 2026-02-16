@@ -1,5 +1,5 @@
-import { motion } from 'motion/react';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { motion } from "motion/react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export function Hero3D() {
   return (
@@ -75,10 +75,10 @@ export function Hero3D() {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="mb-6 text-5xl md:text-6xl lg:text-7xl leading-tight"
             >
-              CordialSoft Builds{' '}
+              CordialSoft Builds{" "}
               <span className="bg-gradient-to-r from-[#5DA9E9] to-[#4FB3BF] bg-clip-text text-transparent">
                 Websites
-              </span>{' '}
+              </span>{" "}
               That Grow Your Business
             </motion.h1>
 
@@ -88,7 +88,8 @@ export function Hero3D() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="mb-10 text-[#1F2937]/70 text-lg max-w-xl leading-relaxed"
             >
-              We design and develop fast, modern, and animated digital experiences that convert visitors into customers
+              We design and develop fast, modern, and animated digital
+              experiences that convert visitors into customers
             </motion.p>
 
             <motion.div
@@ -123,9 +124,9 @@ export function Hero3D() {
               className="mt-12 flex flex-wrap items-center gap-8"
             >
               {[
-                { label: '50+ Projects', value: '50+' },
-                { label: 'Happy Clients', value: '98%' },
-                { label: 'On Time Delivery', value: '100%' },
+                { label: "50+ Projects", value: "50+" },
+                { label: "Happy Clients", value: "98%" },
+                { label: "On Time Delivery", value: "100%" },
               ].map((stat, i) => (
                 <div key={i} className="text-center">
                   <div className="text-2xl font-semibold bg-gradient-to-r from-[#5DA9E9] to-[#4FB3BF] bg-clip-text text-transparent">
@@ -157,13 +158,13 @@ export function Hero3D() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                style={{ transformStyle: 'preserve-3d' }}
+                style={{ transformStyle: "preserve-3d" }}
               >
                 {/* Laptop Screen - Liquid Glass */}
                 <div className="relative glass-strong rounded-[2rem] p-4 shadow-2xl shadow-[#5DA9E9]/20">
                   {/* Webcam notch */}
                   <div className="absolute top-3 left-1/2 -translate-x-1/2 w-2 h-2 bg-[#1F2937]/30 rounded-full" />
-                  
+
                   {/* Screen content - Working IDE */}
                   <div className="aspect-video bg-gradient-to-br from-[#1F2937] to-[#1F2937]/90 rounded-[1.5rem] overflow-hidden relative">
                     {/* IDE Header Bar */}
@@ -190,7 +191,6 @@ export function Hero3D() {
                           <div key={n}>{n}</div>
                         ))}
                       </div>
-
                       {/* Code lines */}
                       <div className="ml-14 space-y-2 text-xs font-mono">
                         <motion.div
@@ -212,6 +212,7 @@ export function Hero3D() {
                           <span className="text-purple-400">function</span>
                           <span className="text-yellow-400">Hero</span>
                           <span className="text-white/50">()</span>
+                          <span className="text-white/50"></span>
                         </motion.div>
 
                         <motion.div
@@ -252,8 +253,10 @@ export function Hero3D() {
 
                     {/* Live Preview Pane */}
                     <div className="absolute top-10 right-0 w-1/3 bottom-0 glass-subtle p-3 overflow-hidden">
-                      <div className="text-xs text-white/50 mb-2">Live Preview</div>
-                      
+                      <div className="text-xs text-white/50 mb-2">
+                        Live Preview
+                      </div>
+
                       {/* Animated website layout */}
                       <div className="space-y-2">
                         {/* Header bar */}
@@ -267,9 +270,9 @@ export function Hero3D() {
                         {/* Content blocks */}
                         <motion.div
                           className="space-y-2"
-                          animate={{ y: [-100, 0] }}
+                          animate={{ y: [-100, 200] }}
                           transition={{
-                            duration: 3,
+                            duration: 10,
                             repeat: Infinity,
                             ease: "linear",
                           }}
@@ -278,8 +281,14 @@ export function Hero3D() {
                             <div key={i} className="flex gap-2">
                               <div className="w-8 h-8 bg-[#5DA9E9]/20 rounded-lg" />
                               <div className="flex-1 space-y-1">
-                                <div className="h-2 bg-white/20 rounded" style={{ width: '80%' }} />
-                                <div className="h-2 bg-white/10 rounded" style={{ width: '60%' }} />
+                                <div
+                                  className="h-2 bg-white/20 rounded"
+                                  style={{ width: "80%" }}
+                                />
+                                <div
+                                  className="h-2 bg-white/10 rounded"
+                                  style={{ width: "60%" }}
+                                />
                               </div>
                             </div>
                           ))}
@@ -288,7 +297,7 @@ export function Hero3D() {
                     </div>
 
                     {/* Status bar */}
-                    <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-r from-[#5DA9E9] to-[#4FB3BF] flex items-center px-4 gap-4">
+                    <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-r from-[#5DA9E9] to-[#181f20] flex items-center px-4 gap-4">
                       <motion.div
                         className="flex items-center gap-2 text-xs text-white"
                         animate={{ scale: [1, 1.1, 1] }}
@@ -297,7 +306,9 @@ export function Hero3D() {
                         <div className="w-2 h-2 bg-green-300 rounded-full" />
                         Connected
                       </motion.div>
-                      <div className="text-xs text-white/70">Building components...</div>
+                      <div className="text-xs text-white/70">
+                        Building components...
+                      </div>
                     </div>
 
                     {/* Floating liquid particles */}
@@ -306,8 +317,8 @@ export function Hero3D() {
                         key={i}
                         className="absolute w-1.5 h-1.5 bg-[#5DA9E9] rounded-full blur-[1px]"
                         style={{
-                          left: `${10 + (i * 6)}%`,
-                          top: '50%',
+                          left: `${10 + i * 6}%`,
+                          top: "50%",
                         }}
                         animate={{
                           y: [-20, -100, -20],
@@ -346,10 +357,10 @@ export function Hero3D() {
 
               {/* Floating tech elements with liquid glass */}
               {[
-                { icon: '{ }', x: -100, y: -50 },
-                { icon: '</>', x: 120, y: -80 },
-                { icon: '< />', x: -80, y: 80 },
-                { icon: 'fn', x: 100, y: 100 },
+                { icon: "{ }", x: -100, y: -50 },
+                { icon: "</>", x: 120, y: -80 },
+                { icon: "< />", x: -80, y: 80 },
+                { icon: "fn", x: 100, y: 100 },
               ].map((item, i) => (
                 <motion.div
                   key={i}

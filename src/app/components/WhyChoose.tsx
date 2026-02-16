@@ -1,32 +1,32 @@
-import { motion } from 'motion/react';
-import { useInView } from 'motion/react';
-import { useRef } from 'react';
-import { Zap, Shield, Heart, Users } from 'lucide-react';
+import { motion } from "motion/react";
+import { useInView } from "motion/react";
+import { useRef } from "react";
+import { Zap, Shield, Heart, Users } from "lucide-react";
 
 const benefits = [
   {
     icon: Zap,
-    title: 'Lightning Fast',
-    description: 'Optimized performance for the best user experience',
-    gradient: 'from-[#5DA9E9] to-[#4FB3BF]',
+    title: "Lightning Fast",
+    description: "Optimized performance for the best user experience",
+    gradient: "from-[#5DA9E9] to-[#4FB3BF]",
   },
   {
     icon: Shield,
-    title: 'Secure & Reliable',
-    description: 'Enterprise-grade security and 99.9% uptime',
-    gradient: 'from-[#4FB3BF] to-[#5DA9E9]',
+    title: "Secure & Reliable",
+    description: "Enterprise-grade security and 99.9% uptime",
+    gradient: "from-[#4FB3BF] to-[#5DA9E9]",
   },
   {
     icon: Heart,
-    title: 'Client-Focused',
-    description: 'Your success is our top priority',
-    gradient: 'from-[#5DA9E9] to-[#CDE7F5]',
+    title: "Client-Focused",
+    description: "Your success is our top priority",
+    gradient: "from-[#5DA9E9] to-[#CDE7F5]",
   },
   {
     icon: Users,
-    title: 'Expert Team',
-    description: 'Skilled professionals dedicated to your project',
-    gradient: 'from-[#4FB3BF] to-[#CDE7F5]',
+    title: "Expert Team",
+    description: "Skilled professionals dedicated to your project",
+    gradient: "from-[#4FB3BF] to-[#CDE7F5]",
   },
 ];
 
@@ -35,7 +35,11 @@ export function WhyChoose() {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section id="about" ref={ref} className="py-32 bg-gradient-to-br from-[#1F2937] via-[#1F2937] to-[#1F2937]/95 text-white relative overflow-hidden">
+    <section
+      id="about"
+      ref={ref}
+      className="py-32 bg-gradient-to-br from-[#1F2937] via-[#1F2937] to-[#1F2937]/95 text-white relative overflow-hidden"
+    >
       {/* Liquid background elements */}
       <div className="absolute inset-0">
         <motion.div
@@ -85,7 +89,7 @@ export function WhyChoose() {
           transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
           className="text-center mb-20"
         >
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.1 }}
@@ -95,7 +99,8 @@ export function WhyChoose() {
           </motion.span>
           <h2 className="mb-4">Why CordialSoft?</h2>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">
-            We combine creativity, technology, and strategy to deliver exceptional results
+            We combine creativity, technology, and strategy to deliver
+            exceptional results
           </p>
         </motion.div>
 
@@ -107,7 +112,11 @@ export function WhyChoose() {
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.7, delay: index * 0.1, ease: [0.19, 1, 0.22, 1] }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.1,
+                  ease: [0.19, 1, 0.22, 1],
+                }}
               >
                 <motion.div
                   whileHover={{ y: -12 }}
@@ -119,10 +128,10 @@ export function WhyChoose() {
                     className="relative inline-flex items-center justify-center mb-6"
                     whileHover={{ rotateY: 360, scale: 1.1 }}
                     transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
-                    style={{ transformStyle: 'preserve-3d' }}
+                    // style={{ transformStyle: "preserve-3d" }}
                   >
                     {/* Liquid glow effect */}
-                    <motion.div 
+                    <motion.div
                       className={`absolute inset-0 bg-gradient-to-r ${benefit.gradient} rounded-[1.5rem] blur-2xl opacity-40 group-hover:opacity-80 transition-opacity duration-500`}
                       animate={{
                         scale: [1, 1.1, 1],
@@ -133,10 +142,12 @@ export function WhyChoose() {
                         ease: "easeInOut",
                       }}
                     />
-                    
+
                     {/* Icon container with glass effect */}
-                    <div className={`relative w-24 h-24 bg-gradient-to-br ${benefit.gradient} rounded-[1.5rem] flex items-center justify-center shadow-2xl shadow-[#5DA9E9]/30`}>
-                      <Icon className="w-12 h-12 text-white" />
+                    <div
+                      className={`relative w-24 h-24 bg-gradient-to-br ${benefit.gradient} rounded-[1.5rem] flex items-center justify-center shadow-2xl shadow-[#5DA9E9]/30`}
+                    >
+                      <Icon className="w-12 h-12 text-white z-10" />
                     </div>
 
                     {/* Floating liquid border */}
@@ -151,12 +162,14 @@ export function WhyChoose() {
                         repeat: Infinity,
                         ease: "linear",
                       }}
-                      style={{ transformStyle: 'preserve-3d' }}
+                      style={{ transformStyle: "preserve-3d" }}
                     />
                   </motion.div>
 
                   <h3 className="mb-3 text-white">{benefit.title}</h3>
-                  <p className="text-white/70 leading-relaxed">{benefit.description}</p>
+                  <p className="text-white/70 leading-relaxed">
+                    {benefit.description}
+                  </p>
                 </motion.div>
               </motion.div>
             );
@@ -171,9 +184,9 @@ export function WhyChoose() {
           className="mt-24 grid md:grid-cols-3 gap-6"
         >
           {[
-            { value: '150+', label: 'Projects Completed' },
-            { value: '50+', label: 'Happy Clients' },
-            { value: '5+', label: 'Years Experience' },
+            { value: "150+", label: "Projects Completed" },
+            { value: "50+", label: "Happy Clients" },
+            { value: "5+", label: "Years Experience" },
           ].map((stat, index) => (
             <motion.div
               key={index}
